@@ -30,50 +30,50 @@ For windows use `Git Bash`
 
 #### Admin 
 add new restaurant  
-curl -v -u admin@gmail.com:12345 -X PUT "http://localhost:8080/restaurant/" -d "name"="newRestaurant"
+`curl -v -u admin@gmail.com:12345 -X PUT "http://localhost:8080/restaurant/" -d "name"="newRestaurant"`
 
-if restaurant has no menu can delete it 
-curl -v -u admin@gmail.com:12345 -X DELETE "http://localhost:8080/restaurant/100027"
+if restaurant has no menu can delete it     
+`curl -v -u admin@gmail.com:12345 -X DELETE "http://localhost:8080/restaurant/100027"`
 
-see all restaurants 
-curl -v -u admin@gmail.com:12345 -X GET "http://localhost:8080/restaurant"
+see all restaurants     
+`curl -v -u admin@gmail.com:12345 -X GET "http://localhost:8080/restaurant"`
 
 can add new menu    
-curl -v -u admin@gmail.com:12345 -X PUT -H "Content-Type: application/json" http://localhost:8080/menu/ -d '{"date":"2017-06-20", "restaurantId":100003,"dishes":[{"name":"newDish", "price":28},{"name":"newDish2", "price":28},{"name":"newDish3", "price":28}]}'
+`curl -v -u admin@gmail.com:12345 -X PUT -H "Content-Type: application/json" http://localhost:8080/menu/ -d '{"date":"2017-06-20", "restaurantId":100003,"dishes":[{"name":"newDish", "price":28},{"name":"newDish2", "price":28},{"name":"newDish3", "price":28}]}'`
 
-delete menu 
-curl -v -u admin@gmail.com:12345 -X DELETE "http://localhost:8080/menu/100005"
+delete menu     
+`curl -v -u admin@gmail.com:12345 -X DELETE "http://localhost:8080/menu/100005"`
 
 see one menu with dishes    
-curl -v -u admin@gmail.com:12345 -X GET "http://localhost:8080/menu/one/100007"
+`curl -v -u admin@gmail.com:12345 -X GET "http://localhost:8080/menu/one/100007"`
 
 see menues with dishes by date  
-curl -v -u admin@gmail.com:12345 -X GET "http://localhost:8080/menu/findByDate/2017-06-10"
+`curl -v -u admin@gmail.com:12345 -X GET "http://localhost:8080/menu/findByDate/2017-06-10"`
 
 like member of the staff can vote   
-curl -v -u admin@gmail.com:12345 -X PUT "http://localhost:8080/vote/100003"
+`curl -v -u admin@gmail.com:12345 -X PUT "http://localhost:8080/vote/100003"`
 
 like member of the staff can change his vote    
-curl -v -u admin@gmail.com:12345 -X PUT "http://localhost:8080/vote/100002"
+`curl -v -u admin@gmail.com:12345 -X PUT "http://localhost:8080/vote/100002"`
 
-see result vote by date 
-curl -v -u admin@gmail.com:12345 -X GET "http://localhost:8080/vote/resultByDay/2017-06-10"
+see result vote by date     
+`curl -v -u admin@gmail.com:12345 -X GET "http://localhost:8080/vote/resultByDay/2017-06-10"`
 
 
 #### User
 
 see one menu with dishes    
-curl -u user@yandex.ru:12345 -X GET "http://localhost:8080/menu/one/100009"
+`curl -u user@yandex.ru:12345 -X GET "http://localhost:8080/menu/one/100009"`
 
 see menues with dishes by date  
-curl -u user@yandex.ru:12345 -X GET "http://localhost:8080/menu/findByDate/2017-06-09"
+`curl -u user@yandex.ru:12345 -X GET "http://localhost:8080/menu/findByDate/2017-06-09"`
 
 can vote    
-curl -u user@yandex.ru:12345 -X PUT "http://localhost:8080/vote/100004"
+`curl -u user@yandex.ru:12345 -X PUT "http://localhost:8080/vote/100004"`
 
-can change his vote 
-curl -u user@yandex.ru:12345 -X PUT "http://localhost:8080/vote/100002"
+can change his vote     
+`curl -u user@yandex.ru:12345 -X PUT "http://localhost:8080/vote/100002"`
 
-see result vote by date 
-curl -u user@yandex.ru:12345 -X GET "http://localhost:8080/vote/resultByDay/2017-06-09"
+see result vote by date     
+`curl -u user@yandex.ru:12345 -X GET "http://localhost:8080/vote/resultByDay/2017-06-09"`
 
